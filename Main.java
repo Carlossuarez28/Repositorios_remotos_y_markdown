@@ -7,7 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int suma = 0;
         int [] array = new int[5];
+
         System.out.println("Introduce 5 numeros: ");
         for (int i = 0; i<array.length; i++){
             array [i] = numeros.nextInt();
@@ -17,5 +19,13 @@ public class Main {
         for (int i = 0; i<array.length; i++){
             System.out.println( array [i]);
         }
+
+        for (int i = 0; i<array.length; i++){
+            suma += array[i];
+        }
+        System.out.println("La suma de los 5 numeros del array es: " + "" + suma);
+
+        double media = (double) suma / array.length;
+        System.out.println("La media de los numeros del array es: " + "" + media);
     }
 }
