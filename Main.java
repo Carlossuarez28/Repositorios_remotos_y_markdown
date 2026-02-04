@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -109,5 +110,11 @@ public class Main {
             System.out.println(enteros[i]);
         }
 
+        Arrays.sort(enteros);
+
+        System.out.println("Array ordenado de mayor a menor:");
+        for (int i = enteros.length - 1; i >= 0; i--) {
+            System.out.print(enteros[i] + " ");
+        }
     }
 }
