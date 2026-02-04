@@ -65,5 +65,19 @@ public class Main {
         for (int i = 0; i<edades.length; i++) {
             System.out.println(edades[i]);
         }
+
+        int edadMayor = 0;
+        int edadMenor = 999;
+
+        for (int i = 0; i<edades.length; i++) {
+            if (edades[i] < edadMenor)
+                edadMenor = edades[i];
+
+            if (edades[i] > edadMayor)
+                edadMayor = edades[i];
+        }
+
+        System.out.println("La menor edad es: " + edadMenor);
+        System.out.println("La mayor edad es: " + edadMayor);
     }
 }
