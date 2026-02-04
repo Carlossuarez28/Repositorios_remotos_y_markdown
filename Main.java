@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -52,7 +53,7 @@ public class Main {
         System.out.println("El numero mas pequeño es: " + numMenor);
         System.out.println("El numero mas grande es: " + numMayor);
 
-         */
+
 
         int [] edades = new int[5];
 
@@ -91,5 +92,22 @@ public class Main {
 
         System.out.println("Hay " + mayorEdad + " mayores de edad");
         System.out.println("Hay " + menorEdad + " menores de edad");
+
+         */
+
+        Random aleatorio = new Random();
+
+        int [] enteros = new int[10];
+
+
+        for (int i = 0; i<enteros.length; i++){
+            enteros [i] = aleatorio.nextInt(100) +1;
+        }
+
+        System.out.println("Estos son los numeros enteros introducidos:");
+        for (int i = 0; i<enteros.length; i++) {
+            System.out.println(enteros[i]);
+        }
+
     }
 }
