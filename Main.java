@@ -68,6 +68,8 @@ public class Main {
 
         int edadMayor = 0;
         int edadMenor = 999;
+        int mayorEdad = 0;
+        int menorEdad = 0;
 
         for (int i = 0; i<edades.length; i++) {
             if (edades[i] < edadMenor)
@@ -79,5 +81,15 @@ public class Main {
 
         System.out.println("La menor edad es: " + edadMenor);
         System.out.println("La mayor edad es: " + edadMayor);
+
+        for (int i = 0; i<edades.length; i++){
+            if (edades[i] < 18)
+                menorEdad ++;
+            else
+                mayorEdad ++;
+        }
+
+        System.out.println("Hay " + mayorEdad + " mayores de edad");
+        System.out.println("Hay " + menorEdad + " menores de edad");
     }
 }
