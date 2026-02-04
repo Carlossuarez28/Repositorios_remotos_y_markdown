@@ -27,5 +27,28 @@ public class Main {
 
         double media = (double) suma / array.length;
         System.out.println("La media de los numeros del array es: " + "" + media);
+
+        int numMayor = 0;
+        int numMenor = 999;
+        int positivo = 0;
+        int negativo = 0;
+
+        for (int i = 0; i<array.length; i++){
+            if (array[i] < 0)
+                negativo ++;
+            else
+                positivo ++;
+
+            if (array[i] < numMenor)
+                numMenor = array[i];
+
+            if (array[i] > numMayor)
+                numMayor = array[i];
+        }
+
+        System.out.println("Hay " + negativo + " numeros negativos.");
+        System.out.println("Hay " + positivo + " numeros positivos.");
+        System.out.println("El numero mas pequeño es: " + numMenor);
+        System.out.println("El numero mas grande es: " + numMayor);
     }
 }
