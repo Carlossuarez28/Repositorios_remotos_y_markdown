@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /*
+
         int suma = 0;
         int [] array = new int[5];
 
@@ -49,13 +49,24 @@ public class Main {
                 numMayor = array[i];
         }
 
+        int contador;
+        for (int i = 0; i< array.length; i++){
+            contador = 0;
+            for (int j = 0; j< array.length; j++){
+                if (array[i] == array[j])
+                    contador ++;
+            }
+            System.out.println("Este numero: " + array[i] + " se repite " + contador + " veces");
+        }
+
+
         System.out.println("Hay " + negativo + " numeros negativos.");
         System.out.println("Hay " + positivo + " numeros positivos.");
         System.out.println("El numero mas pequeño es: " + numMenor);
         System.out.println("El numero mas grande es: " + numMayor);
 
 
-
+        /*
         int [] edades = new int[5];
 
         System.out.println("Introduce 5 edades: ");
@@ -95,7 +106,7 @@ public class Main {
         System.out.println("Hay " + menorEdad + " menores de edad");
 
          */
-
+        /*
         Random aleatorio = new Random();
 
         int [] enteros = new int[10];
@@ -122,5 +133,6 @@ public class Main {
             if (enteros[i] % 2 == 0)
                 System.out.print(enteros[i] + " ");
         }
+        */
     }
 }
