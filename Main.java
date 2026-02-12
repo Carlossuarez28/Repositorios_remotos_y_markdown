@@ -65,6 +65,34 @@ public class Main {
         System.out.println("El numero mas pequeño es: " + numMenor);
         System.out.println("El numero mas grande es: " + numMayor);
 
+        System.out.println("¿Que numero quieres eliminar?");
+        int eliminar = numeros.nextInt();
+
+        int contador2 = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == eliminar) {
+                contador2++;
+            }
+        }
+
+        if (contador2 == 0) {
+            System.out.println("El numero no existe en el array.");
+        } else {
+
+            int[] nuevoArray = new int[array.length - contador2];
+            int j = 0;
+
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] != eliminar) {
+                    nuevoArray[j] = array[i];
+                    j++;
+                }
+            }
+            System.out.println("Array despues de eliminar el numero:");
+            for (int i = 0; i < nuevoArray.length; i++) {
+                System.out.println(nuevoArray[i]);
+            }
+        }
 
         /*
         int [] edades = new int[5];
