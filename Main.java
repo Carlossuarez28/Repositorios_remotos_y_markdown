@@ -97,30 +97,54 @@ public class Main {
          */
 
         Random aleatorio = new Random();
+        int[] enteros = new int[10];
 
-        int [] enteros = new int[10];
-
-
-        for (int i = 0; i<enteros.length; i++){
-            enteros [i] = aleatorio.nextInt(100) +1;
+        for (int i = 0; i < enteros.length; i++) {
+            enteros[i] = aleatorio.nextInt(100) + 1;
         }
 
         System.out.println("Estos son los numeros enteros introducidos:");
-        for (int i = 0; i<enteros.length; i++) {
+        for (int i = 0; i < enteros.length; i++) {
             System.out.println(enteros[i]);
         }
 
         Arrays.sort(enteros);
-
         System.out.println("Array ordenado de mayor a menor:");
         for (int i = enteros.length - 1; i >= 0; i--) {
             System.out.print(enteros[i] + " ");
         }
 
-        System.out.println("\nEstos son los numeros pares:");
-        for (int i = 0; i<enteros.length; i++) {
-            if (enteros[i] % 2 == 0)
-                System.out.print(enteros[i] + " ");
+        int countPares = 0;
+        int countImpares = 0;
+        for (int i = 0; i < enteros.length; i++) {
+            if (enteros[i] % 2 == 0) {
+                countPares++;
+            } else {
+                countImpares++;
+            }
+        }
+
+        int[] pares = new int[countPares];
+        int[] impares = new int[countImpares];
+
+        int indexPar = 0;
+        int indexImpar = 0;
+        for (int i = 0; i < enteros.length; i++) {
+            if (enteros[i] % 2 == 0) {
+                pares[indexPar++] = enteros[i];
+            } else {
+                impares[indexImpar++] = enteros[i];
+            }
+        }
+
+        System.out.println("\nArray de números pares:");
+        for (int i = 0; i < pares.length; i++) {
+            System.out.print(pares[i] + " ");
+        }
+        
+        System.out.println("\nArray de números impares:");
+        for (int i = 0; i < impares.length; i++) {
+            System.out.print(impares[i] + " ");
         }
     }
 }
