@@ -82,7 +82,7 @@ public class Main {
 
         System.out.println("La menor edad es: " + edadMenor);
         System.out.println("La mayor edad es: " + edadMayor);
-
+        
         for (int i = 0; i < edades.length; i++) {
             if (edades[i] < 18)
                 menorEdad++;
@@ -92,7 +92,7 @@ public class Main {
 
         System.out.println("Hay " + mayorEdad + " mayores de edad");
         System.out.println("Hay " + menorEdad + " menores de edad");
-
+        
         int rango1 = 0; // 0-17
         int rango2 = 0; // 18-30
         int rango3 = 0; // 31-50
@@ -113,7 +113,7 @@ public class Main {
         System.out.println("Rango 18-30: " + rango2 + " personas");
         System.out.println("Rango 31-50: " + rango3 + " personas");
         System.out.println("Rango 51+: " + rango4 + " personas");
-        
+
         boolean todasMayores = true; // asumimos que sí
         for (int i = 0; i < edades.length; i++) {
             if (edades[i] < 18) {
