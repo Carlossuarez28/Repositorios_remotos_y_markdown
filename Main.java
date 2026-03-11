@@ -55,6 +55,8 @@ public class Main {
         System.out.println("El numero mas grande es: " + numMayor);
 
         */
+
+        /*
         int[] edades = new int[5];
 
         System.out.println("Introduce 5 edades: ");
@@ -128,34 +130,39 @@ public class Main {
             }
         }
 
-         /*
+         */
+
+
 
         Random aleatorio = new Random();
+        int[] enteros = new int[10];
+        int suma = 0;
 
-        int [] enteros = new int[10];
 
-
-        for (int i = 0; i<enteros.length; i++){
-            enteros [i] = aleatorio.nextInt(100) +1;
+        for (int i = 0; i < enteros.length; i++) {
+            enteros[i] = aleatorio.nextInt(100) + 1;
+            suma += enteros[i];
         }
 
         System.out.println("Estos son los numeros enteros introducidos:");
-        for (int i = 0; i<enteros.length; i++) {
+        for (int i = 0; i < enteros.length; i++) {
             System.out.println(enteros[i]);
         }
 
-        Arrays.sort(enteros);
+        double media = (double) suma / enteros.length;
+        System.out.println("La media de los números generados es: " + media);
 
+        Arrays.sort(enteros);
         System.out.println("Array ordenado de mayor a menor:");
         for (int i = enteros.length - 1; i >= 0; i--) {
             System.out.print(enteros[i] + " ");
         }
-
+        
         System.out.println("\nEstos son los numeros pares:");
-        for (int i = 0; i<enteros.length; i++) {
+        for (int i = 0; i < enteros.length; i++) {
             if (enteros[i] % 2 == 0)
                 System.out.print(enteros[i] + " ");
         }
-        */
+
     }
 }
