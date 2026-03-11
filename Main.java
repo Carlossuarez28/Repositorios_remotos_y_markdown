@@ -141,10 +141,27 @@ public class Main {
         for (int i = 0; i < pares.length; i++) {
             System.out.print(pares[i] + " ");
         }
-        
+
         System.out.println("\nArray de números impares:");
         for (int i = 0; i < impares.length; i++) {
             System.out.print(impares[i] + " ");
         }
+
+        System.out.print("\n\nIngresa un número a buscar: ");
+        int numBuscado = numeros.nextInt();
+        boolean encontrado = false;
+
+        for (int i = 0; i < enteros.length; i++) {
+            if (enteros[i] == numBuscado) {
+                System.out.println("Número encontrado en la posición: " + i);
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (!encontrado) {
+            System.out.println("El número no se encuentra en el array.");
+        }
+
     }
 }
