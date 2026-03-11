@@ -32,7 +32,8 @@ Para profundizar en los temas vistos, te recomiendo visitar las siguientes pági
 
 
 
-[Image of data structures diagram]
+### Visualización del Proceso
+![Icono de Programación](https://cdn-icons-png.flaticon.com/512/606/606204.png)
 
 
 ---
