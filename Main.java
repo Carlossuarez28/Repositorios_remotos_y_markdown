@@ -157,12 +157,17 @@ public class Main {
         for (int i = enteros.length - 1; i >= 0; i--) {
             System.out.print(enteros[i] + " ");
         }
-        
+
         System.out.println("\nEstos son los numeros pares:");
         for (int i = 0; i < enteros.length; i++) {
             if (enteros[i] % 2 == 0)
                 System.out.print(enteros[i] + " ");
         }
 
+        System.out.println("\nEstos son los números por encima de la media:");
+        for (int i = 0; i < enteros.length; i++) {
+            if (enteros[i] > media)
+                System.out.print(enteros[i] + " ");
+        }
     }
 }
