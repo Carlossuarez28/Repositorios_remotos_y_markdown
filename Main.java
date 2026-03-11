@@ -55,66 +55,76 @@ public class Main {
         System.out.println("El numero mas grande es: " + numMayor);
 
         */
-                int[] edades = new int[5];
+        int[] edades = new int[5];
 
-                System.out.println("Introduce 5 edades: ");
-                for (int i = 0; i < edades.length; i++) {
-                    edades[i] = numeros.nextInt();
-                }
+        System.out.println("Introduce 5 edades: ");
+        for (int i = 0; i < edades.length; i++) {
+            edades[i] = numeros.nextInt();
+        }
 
-                System.out.println("Estas son las edades introducidas:");
-                for (int i = 0; i < edades.length; i++) {
-                    System.out.println(edades[i]);
-                }
+        System.out.println("Estas son las edades introducidas:");
+        for (int i = 0; i < edades.length; i++) {
+            System.out.println(edades[i]);
+        }
 
-                int edadMayor = 0;
-                int edadMenor = 999;
-                int mayorEdad = 0;
-                int menorEdad = 0;
+        int edadMayor = 0;
+        int edadMenor = 999;
+        int mayorEdad = 0;
+        int menorEdad = 0;
 
-                for (int i = 0; i < edades.length; i++) {
-                    if (edades[i] < edadMenor)
-                        edadMenor = edades[i];
+        for (int i = 0; i < edades.length; i++) {
+            if (edades[i] < edadMenor)
+                edadMenor = edades[i];
 
-                    if (edades[i] > edadMayor)
-                        edadMayor = edades[i];
-                }
+            if (edades[i] > edadMayor)
+                edadMayor = edades[i];
+        }
 
-                System.out.println("La menor edad es: " + edadMenor);
-                System.out.println("La mayor edad es: " + edadMayor);
+        System.out.println("La menor edad es: " + edadMenor);
+        System.out.println("La mayor edad es: " + edadMayor);
 
-                for (int i = 0; i < edades.length; i++) {
-                    if (edades[i] < 18)
-                        menorEdad++;
-                    else
-                        mayorEdad++;
-                }
+        for (int i = 0; i < edades.length; i++) {
+            if (edades[i] < 18)
+                menorEdad++;
+            else
+                mayorEdad++;
+        }
 
-                System.out.println("Hay " + mayorEdad + " mayores de edad");
-                System.out.println("Hay " + menorEdad + " menores de edad");
-                
-                int rango1 = 0; // 0-17
-                int rango2 = 0; // 18-30
-                int rango3 = 0; // 31-50
-                int rango4 = 0; // 51 en adelante
+        System.out.println("Hay " + mayorEdad + " mayores de edad");
+        System.out.println("Hay " + menorEdad + " menores de edad");
 
-                for (int i = 0; i < edades.length; i++) {
-                    if (edades[i] >= 0 && edades[i] <= 17)
-                        rango1++;
-                    else if (edades[i] >= 18 && edades[i] <= 30)
-                        rango2++;
-                    else if (edades[i] >= 31 && edades[i] <= 50)
-                        rango3++;
-                    else if (edades[i] >= 51)
-                        rango4++;
-                }
+        int rango1 = 0; // 0-17
+        int rango2 = 0; // 18-30
+        int rango3 = 0; // 31-50
+        int rango4 = 0; // 51 en adelante
 
-                System.out.println("Rango 0-17: " + rango1 + " personas");
-                System.out.println("Rango 18-30: " + rango2 + " personas");
-                System.out.println("Rango 31-50: " + rango3 + " personas");
-                System.out.println("Rango 51+: " + rango4 + " personas");
+        for (int i = 0; i < edades.length; i++) {
+            if (edades[i] >= 0 && edades[i] <= 17)
+                rango1++;
+            else if (edades[i] >= 18 && edades[i] <= 30)
+                rango2++;
+            else if (edades[i] >= 31 && edades[i] <= 50)
+                rango3++;
+            else if (edades[i] >= 51)
+                rango4++;
+        }
 
-                numeros.close();
+        System.out.println("Rango 0-17: " + rango1 + " personas");
+        System.out.println("Rango 18-30: " + rango2 + " personas");
+        System.out.println("Rango 31-50: " + rango3 + " personas");
+        System.out.println("Rango 51+: " + rango4 + " personas");
+        
+        boolean todasMayores = true; // asumimos que sí
+        for (int i = 0; i < edades.length; i++) {
+            if (edades[i] < 18) {
+                todasMayores = false;
+                break; // ya encontramos una menor, no hace falta seguir
+            }
+        }
+
+        System.out.println("¿Todas las personas son mayores de edad? " + todasMayores);
+
+        numeros.close();
             }
         }
 
